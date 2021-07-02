@@ -1,0 +1,83 @@
+version: "2.0"
+
+nlu:
+  - intent: search_treat
+    examples: |
+      - 得了[百日咳](disease)怎么治疗呢
+      - 怎么治疗[肺炎](disease)呢
+      - [苯中毒](disease)是什么病呢
+      - 什么是[肺癌](disease)
+      - [感染性休克](disease)
+
+  - intent: search_food
+    examples: |
+      - 得了[咯血](disease)可以吃什么呢
+      - 得了[气胸](disease)可以吃什么食物呢
+      - 得了[肺炎](disease)可以吃[芒果](food)吗
+      - [肺水肿](disease)能吃[蟹肉](food)吗
+      - [禽流感](disease)的食谱有那些
+
+
+  - intent: search_symptom
+    examples: |
+      - 得了[气管肿瘤](disease)会有什么症状
+      - [鼾症](disease)的症状有什么呢
+      - [风湿热](disease)这病有什么表现
+      - [风热感冒](disease)有什么症状
+      - 患了[艾滋病](disease)会怎么样
+      - 请问[感冒](disease)有什么症状
+
+  - intent: search_cause
+    examples: |
+      - 为什么会得[高血压](disease)呢
+      - 怎样才会得[冠心病](disease)呢
+      - 得[克山病](disease)得原因有那些
+
+  - intent: search_neopathy
+    examples: |
+      - 得了[中暑衰竭](disease)会不会有并发症
+      - [阿米巴肠病](disease)有什么并发症
+      - [糖尿病](disease)有没有并发症
+
+  - intent: search_drug
+    examples: |
+      - 得了[便秘](disease)该吃什么药
+      - 治疗[肠梗阻](disease)有什么药
+      - 治疗[感冒](disease)用什么药
+      - 治疗[肺蛔虫病](disease)开什么药方
+      - 请问[风寒感冒](disease)吃什么药
+      - 得了[便秘](disease)怎么办呢
+
+  - intent: search_prevention
+    examples: |
+      - 怎么预防[肠结核](disease)呢?
+      - [肠结核](disease)怎么预防呢?
+      - [肺蛔虫病](disease)能预防吗?
+
+  - intent: search_drug_func
+    examples: |
+     - [司帕沙星片](drug)可以主治什么病
+     - [大活络丸](drug)有什么用
+     - [青霉素](drug)治疗什么病
+
+
+  - intent: search_disease_treat_time
+    examples: |
+       - 得了[胆石症](disease)要治疗多久
+       - 治疗[大肠息肉](disease)要多长时间
+       - 要多长时间治好[腹痛](disease)
+
+  - intent: search_easy_get
+    examples: |
+      - 谁容易感染[感冒](disease)呢
+      - 哪些人容易[黄疸](disease)呢
+      - 什么人容易得[癫痫](disease)
+      - 什么人容易患[糖尿病](disease)呢?
+
+  - intent: search_disease_dept
+    examples: |
+      - [腹膜炎](disease)看什么科
+      - [肝硬化](disease)属于什么科
+      - [内科](dept)可以看什么病
+      - [内科](dept)治疗什么病
+      - [淋巴癌]可以看[外科](dept)吗？

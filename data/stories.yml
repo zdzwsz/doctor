@@ -1,0 +1,110 @@
+version: "2.0"
+
+stories:
+#问治疗
+- story: story_1_search_treat_simple
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_treat
+  - action: action_search_treat
+  - intent: goodbye
+  - action: utter_goodbye
+#问可以吃什么食物
+- story: story_2_search_food_simple
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_food
+  - action: action_search_food
+  - intent: goodbye
+  - action: utter_goodbye
+#问症状
+- story: story_3_search_symptom_simple
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_symptom
+  - action: action_search_symptom
+  - intent: goodbye
+  - action: utter_goodbye
+
+#问病因
+- story: story_4_search_cause_simple
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_cause
+  - action: action_search_cause
+  - intent: goodbye
+  - action: utter_goodbye
+
+#问并发症
+- story: story_5_search_neopathy_simple
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_neopathy
+  - action: action_search_neopathy
+  - intent: goodbye
+  - action: utter_goodbye
+
+#问药
+- story: story_6_search_drug_simple
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_drug
+  - action: action_search_drug
+  - intent: goodbye
+  - action: utter_goodbye
+
+#问预防
+- story: story_7_search_prevention_simple
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_prevention
+  - action: action_search_prevention
+  - intent: goodbye
+  - action: utter_goodbye
+
+#问药的功能
+- story: story_8_search_drug_func_simple
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_drug_func
+  - action: action_search_drug_func
+  - intent: goodbye
+  - action: utter_goodbye
+
+#发病周期
+- story: story_9_search_disease_treat_time_simple
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_disease_treat_time
+  - action: action_search_disease_treat_time
+  - intent: goodbye
+  - action: utter_goodbye
+
+#问患病体质
+- story: story_10_search_easy_get_simple
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_easy_get
+  - action: action_search_easy_get
+  - intent: goodbye
+  - action: utter_goodbye
+
+#问治病科室
+- story: story_11_search_disease_dept_simple
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_disease_dept
+  - action: action_search_disease_dept
+  - intent: goodbye
+  - action: utter_goodbye

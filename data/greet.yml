@@ -1,0 +1,36 @@
+version: "2.0"
+
+nlu:
+  - intent: greet
+    examples: |
+      - 小凌
+      - 小凌，你好
+      - 你好
+      - 你好呀
+
+
+  - intent: goodbye
+    examples: |
+      - 再见
+      - 拜拜
+      - 拜
+      - 滚
+      - 你走
+
+  - intent: thanks
+    examples: |
+      - 谢了
+      - 谢谢
+      - 谢谢你
+
+
+responses:
+  utter_greet:
+    - text: "我在"
+    - text: "我在听"
+    - text: "有什么可以帮您"
+  utter_goodbye:
+    - text: "再见，祝您身体健康～"
+    - text: "拜拜，希望我有帮到您～"
+  utter_default:
+    - text: "对不起，我不明白。你能换个说法吗？"

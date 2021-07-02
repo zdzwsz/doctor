@@ -1,0 +1,107 @@
+version: "2.0"
+
+slots:
+  disease:
+    type: text
+    influence_conversation: false
+  symptom:
+    type: text
+    influence_conversation: false
+  dept:
+    type: text
+    influence_conversation: false
+  drug:
+    type: text
+    influence_conversation: false
+  food:
+    type: text
+    influence_conversation: false
+  sure:
+    type: any
+    influence_conversation: false
+  pre_disease:
+    type: any
+    influence_conversation: false
+  city:
+    type: text
+    influence_conversation: false
+  day:
+    type: text
+    influence_conversation: false
+  requested_slot:
+    type: any
+    influence_conversation: false
+
+
+intents:
+  - greet
+  - goodbye
+  - affirmative
+  - search_treat
+  - search_food
+  - search_symptom
+  - search_cause
+  - search_neopathy
+  - search_drug
+  - search_prevention
+  - search_drug_func
+  - search_disease_treat_time
+  - search_easy_get
+  - search_disease_dept
+  - thanks
+  - chat
+  - search_weather
+  - day
+  - city
+
+entities:
+  - disease
+  - symptom
+  - dept
+  - drug
+  - food
+  - city
+  - day
+
+actions:
+  - utter_donknow
+  - action_first
+  - action_donknow
+  - action_echo
+  - action_search_treat
+  - action_search_food
+  - action_search_symptom
+  - action_search_cause
+  - action_search_neopathy
+  - action_search_drug
+  - action_search_prevention
+  - action_search_drug_func
+  - action_search_disease_treat_time
+  - action_search_easy_get
+  - action_search_disease_dept
+  - utter_greet
+  - utter_goodbye
+  - utter_submit_weather_form
+  - utter_slots_values
+  - validate_weather_form
+  - action_ask_weather_form_city
+  - action_ask_weather_form_day
+  - action_weather_form
+  - action_clear_weather_form_slots
+
+forms:
+  weather_form:
+    ignored_intents:
+      - chat
+    required_slots:
+      city:
+        - type: from_entity
+          entity: city
+      day:
+        - type: from_entity
+          entity: day
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

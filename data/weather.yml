@@ -1,0 +1,29 @@
+version: "2.0"
+
+nlu:
+  - intent: search_weather
+    examples: |
+      - 今天天气怎么样
+      - 今天下大雨吗
+      - [北京](city)天气怎么样
+      - [珠海](city)明天(day)天气怎么样
+      - [深圳](city)今天(day)温度怎么样
+      - [广州](city)后天(day)会下雨吗
+      - [阳江](city)会有台风吗
+
+  - intent: city
+    examples: |
+      - [珠海](city)
+      - [珠海](city)的
+      - [珠海](city)市
+      - [珠海](city)市的
+
+  - intent: day
+    examples: |
+      - [今天](day)
+      - [今天](day)的
+      - [明天](day)
+      - [明天](day)的
+      - [后天](day)
+      - [后天](day)的
+

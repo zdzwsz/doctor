@@ -1,0 +1,11 @@
+version: "2.0"
+
+nlu:
+  - lookup: day
+    examples: |
+      - 今天
+      - 明天
+      - 后天
+      - 大后天
+      - 昨天
+      - 前天

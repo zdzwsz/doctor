@@ -1,0 +1,19 @@
+version: "2.0"
+
+nlu:
+  - intent: yes
+    examples: |
+      - 是
+      - 对
+      - 没错
+      - 正确
+      - 好的
+
+  - intent: thats_good
+    examples: |
+      - 那个好
+      - 这个不错
+      - 这个可以
+      - 行的
+      - 那行
+      - 那好

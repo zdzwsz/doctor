@@ -1,0 +1,120 @@
+version: "2.0"
+
+rules:
+  - rule: 问治疗
+    steps:
+      - intent: search_treat
+      - action: action_search_treat
+
+  - rule: 唤醒
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+
+  - rule: 再见
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: 问食物
+    steps:
+      - intent: search_food
+      - action: action_search_food
+
+  - rule: 问症状
+    steps:
+      - intent: search_symptom
+      - action: action_search_symptom
+
+  - rule: 问病因
+    steps:
+      - intent: search_cause
+      - action: action_search_cause
+
+  - rule: 问药
+    steps:
+      - intent: search_drug
+      - action: action_search_drug
+
+  - rule: 预防
+    steps:
+      - intent: search_prevention
+      - action: action_search_prevention
+
+  - rule: 问药效
+    steps:
+      - intent: search_drug_func
+      - action: action_search_drug_func
+
+  - rule: 问体质
+    steps:
+      - intent: search_easy_get
+      - action: action_search_easy_get
+
+  - rule: 问科室
+    steps:
+      - intent: search_disease_dept
+      - action: action_search_disease_dept
+
+  - rule: 问并发症
+    steps:
+      - intent: search_neopathy
+      - action: action_search_neopathy
+
+  - rule: 没答案
+    steps:
+      - intent: nlu_fallback
+      - action: utter_default
+
+  - rule: 闲聊
+    steps:
+      - intent: chat
+      - action: utter_chat
+
+  - rule: 激活天气意图
+    steps:
+      - intent: search_weather
+      - action: weather_form
+      - active_loop: weather_form
+
+  - rule: 查询天气
+    condition:
+      - active_loop: weather_form
+    steps:
+      - action: weather_form
+      - active_loop: null
+      - slot_was_set:
+        - requested_slot: null
+      - action: action_weather_form
+      - action: action_clear_weather_form_slots
+
+  - rule: 不愉快的天气询问
+    condition:
+      # Condition that form is active.
+      - active_loop: weather_form
+    steps:
+      # This unhappy path handles the case of an intent `chitchat`.
+      - intent: chat
+      - action: utter_chat
+      # Return to form after handling the `chitchat` intent
+      - action: weather_form
+      - active_loop: weather_form
+
+#######
+#  - rule: 通过日期激活天气意图
+#    steps:
+#      - intent: day
+#      - action: weather_form
+#      - slot_was_set:
+#        - requested_slot: day
+#      - active_loop: weather_form
+#
+#  - rule: 通过城市激活天气意图
+#    steps:
+#      - intent: city
+#      - action: weather_form
+#      - slot_was_set:
+#        - requested_slot: city
+#      - active_loop: weather_form
+#######
